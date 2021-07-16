@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            font: normal 20pt arial; /* estilo da letra*/
+            background: green;
+            color: white;
+            width: 200px; /*altura*/
+            height: 200px; /*largura*/
+            line-height: 200px; /*posição da letra */
+            text-align: center; /*letra ao centro*/
+        }
+    </style>
+</head>
+<body>
+    <div id = "area" onclick = "clicar()" onmouseenter = "entrar()" onmouseout = "sair()">
+        interaja..
+    </div>
+    <script>
+       /* outra forma de mostra a execução do mouse
+        var a = document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)*/
+        
+         var a = document.getElementById('area') // criou-se a variavel "a" identicando o id "area" 
+        function clicar() {
+            a.innerText = 'clicou' // ao clicar o innertext altera o nome para clicou
+            a.style.background = 'red'
+        }
+        function entrar() {
+            a.innerText = 'Entrou!'
+        }
+        function sair() {
+            a.innerText = 'Saiu!'
+            a.style.background = 'green'
+        }
+    </script>
+</body>
+</html>
